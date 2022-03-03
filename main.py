@@ -14,6 +14,8 @@ browser=webdriver.Chrome("/usr/local/bin/chromedriver")#需要修改对应browse
 url="https://hk.sz.gov.cn:8118/userPage/login"
 browser.get(url)
 
+browser.find_element_by_xpath('//div[@id="winLoginNotice"]/div/div/button').click()
+
 zhengjianleixing=Select(browser.find_element_by_id('select_certificate'))
 zhengjianleixing.select_by_value('2')
 
